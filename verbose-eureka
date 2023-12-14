@@ -1,0 +1,9 @@
+self.state = initial
+        self.reducer = reducer
+        self.backgroundRemoval = backgroundRemoval
+    }
+    
+    func dispatch(_ action: AppAction) {
+        handleMaskCreation(action)
+        state = reducer.reduce(state, action)
+    }
